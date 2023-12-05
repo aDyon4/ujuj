@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UJUJ</title>
+</head>
+
+
+<body>
+    
+    <table>
+        <tr>
+            <td  ><img id='kep1' src="alien1.png" alt="" onclick="valt(1)"></td>
+            <td ><img id='kep2'  src="alien2.png" alt="" onclick="valt(2)"></td>
+        </tr>
+        <tr>
+            <td ><img id='kep3' src="alien3.png" alt="" onclick="valt(3)"></td>
+            <td><img id='kep4'  src="alien4.png" alt="" onclick="valt(4)"></td>
+        </tr>
+    </table>
+
+</body>
+</html>
+
+<script>
+
+    let a = [ 0, 1, 2, 3, 4 ] ;
+    
+    function valt(i){
+        a[i]++; if(a[i] == 5) a[i] = 1;
+        document.getElementById("kep"+i).src = "alien"+a[i]+".png";
+    }
+
+</script>
